@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meals</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <h1>Our Meal Today!</h1>
+        <% meals.forEach(meal => { %>
+            <div class="main-box">
+                <h2 class="main-title">
+                    <%= meal.strMeal %>
+                </h2>
+                <div class="content">
+                    <p class="instruction"><span>Meal Instruction:</span><br>
+                        <%= meal.strInstructions %>
+                    </p>
+                    <img class="meal-img" src="<%= meal.strMealThumb %>" alt="mealImg">
+                </div>
+                <div class="catContain">
+                    <h5>Category: </h5>
+                    <span>
+                        <%= meal.strCategory %>
+                    </span>
+                </div>
+                <div class="catContain">
+                    <h5>Country: </h5>
+                    <span>
+                        <%= meal.strArea %>
+                    </span>
+                </div>
+            </div>
+        <% }) %>
+</body>
+
+</html>
